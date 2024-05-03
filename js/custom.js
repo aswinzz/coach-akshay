@@ -99,6 +99,12 @@ $(document).ready(function() {
     });
   });
 
+  $(document).ready(function() {
+    var video = document.querySelector('video');
+    console.log(video);
+    video.play();
+  });
+
 
   /* wow
   -------------------------------*/
