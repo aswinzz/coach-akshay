@@ -38,7 +38,8 @@ h2 {
 #trainer h2,
 #newsletter h2,
 #blog h2,
-#price h2 {
+#price h2
+#achievements h2 {
   padding-bottom: 2px;
 }
 
@@ -75,7 +76,8 @@ a {
 -----------------------------------------*/
 #trainer,
 #blog,
-#price {
+#price,
+#achievements {
     padding-top: 10rem;
     padding-bottom: 10rem;
 }
@@ -85,7 +87,8 @@ a {
 #newsletter,
 #price,
 #testimonial,
-#blog-header {
+#blog-header,
+#achievements {
   text-align: center;
 }
 
@@ -263,8 +266,8 @@ a {
    Overview  section              
 -----------------------------------------*/
 #overview {
-  padding-top: 14rem;
-  padding-bottom: 20rem;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
   position: relative;
 }
 
@@ -360,24 +363,30 @@ a {
   }
 }
 
+.main-video {
+  transform: rotate(270deg);
+  width: 100%;
+  height: 480px;
+}
+
 /*---------------------------------------
    Trainer section              
 -----------------------------------------*/
-#trainer {
+#trainer, #achievements {
   background: #f9f9f9;
 }
 
-#trainer h3 {
+#trainer h3, #achievements h3 {
   letter-spacing: 1px;
   margin-top: 0px;
   padding-bottom: 12px;
 }
 
-#trainer img {
+#trainer img, #achievements img {
   width: 100%;
 }
 
-#trainer .trainer-thumb {
+#trainer .trainer-thumb, #achievements .trainer-thumb {
   position: relative;
   margin-top: 72px;
   margin-bottom: 32px;
@@ -473,6 +482,9 @@ a {
   color: #26253a;
 }
 
+.achievements > img {
+  height: 353px;
+}
 
 
 /*---------------------------------------
@@ -979,7 +991,9 @@ footer .copyright-text {
 
   #trainer,
   #blog,
-  #price {
+  #price,
+  #achievements,
+  #achievements {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
@@ -993,6 +1007,10 @@ footer .copyright-text {
 
 
 @media (max-width: 760px) {
+
+  .main-video {
+    height: 408px;
+  }
 
   #home {
     height: 100vh;
