@@ -125,3 +125,10 @@ $(document).ready(function() {
     })
   }
 });
+
+$(document).ready(function() {
+  if (window.mixpanel) {
+    mixpanel.init("f51f23fac4280e94e7f1d06929e1888e");
+    mixpanel.track("Page View");
+  }
+});
