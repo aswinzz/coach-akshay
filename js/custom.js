@@ -112,3 +112,16 @@ $(document).ready(function() {
 
   });
 
+
+$(document).ready(function() {
+  var submitEl = document.querySelector('#submit');
+  if (submitEl) {
+    submitEl.addEventListener('click', function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      var message = document.getElementById("whatsappMessage").value;
+      var whatsappURL = "https://wa.me/9744962827?text=" + encodeURIComponent(message);
+      window.open(whatsappURL, '_blank');
+    })
+  }
+});
