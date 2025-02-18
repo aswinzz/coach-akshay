@@ -3,9 +3,7 @@
 import { useRef, useEffect, useState } from "react"
 import { FeaturesSection } from "../ui/features-section"
 import { Dumbbell, Target, Clock, Trophy } from "lucide-react"
-import { SparklesCore } from "../ui/sparkles"
 import { FlipWords } from "../ui/flip-words"
-import { Button } from "../ui/button"
 
 export function AboutSection() {
   const videoRef = useRef<HTMLVideoElement>(null)
