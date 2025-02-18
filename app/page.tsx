@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/sections/hero"
 import { AboutSection } from "@/components/sections/about"
+import { ClientAchievementsSection } from "@/components/sections/client-achievements"
 import { TransformationsSection } from "@/components/sections/transformations"
 import { AchievementsSection } from "@/components/sections/achievements"
 import { ContactSection } from "@/components/sections/contact"
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <ClientAchievementsSection />
       <TransformationsSection />
       <AchievementsSection />
       <ReviewsSection />
