@@ -6,6 +6,7 @@ import { Button } from "./ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 import { Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -31,57 +32,63 @@ export function Navbar() {
   }, [])
 
   return (
-    <nav 
+    <header 
       className={cn(
-        "fixed top-0 inset-x-0 h-16 bg-white/80 backdrop-blur-sm z-50 border-b border-neutral-200 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200 transition-all duration-300",
         scrolled ? "translate-y-0" : "-translate-y-full"
       )}
     >
-      <div className="container mx-auto h-full flex items-center justify-between">
-        <Image 
-          src="/images/logo.png"
-          alt="Coach Akshay Logo"
-          width={120}
-          height={40}
-          className="h-10 w-auto"
-        />
-        
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-6">
-          {navItems.map((item) => (
-            <a 
-              key={item.name}
-              href={item.href}
-              className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
+      <div className="container mx-auto px-4">
+        <nav className="flex items-center justify-between h-24">
+          <Link href="/" className="relative h-16 w-48">
+            <Image
+              src="/images/logo.png"
+              alt="Coach Akshay Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </Link>
 
-        {/* Mobile Nav */}
-        <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
-              <Menu className="h-6 w-6" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent>
-            <div className="flex flex-col gap-4 mt-8">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="text-lg font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
-          </SheetContent>
-        </Sheet>
+          <div className="hidden md:flex items-center gap-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-lg font-medium text-neutral-600 hover:text-blue-500 transition-colors font-heading"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                className="md:hidden"
+                size="icon"
+              >
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <div className="flex flex-col gap-6 mt-8">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-lg font-medium text-neutral-600 hover:text-blue-500 transition-colors font-heading"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
+        </nav>
       </div>
-    </nav>
+    </header>
   )
 } 
