@@ -72,14 +72,11 @@ export function AboutSection() {
   return (
     <section id="about" className="relative py-20 overflow-hidden bg-white">
       <div className="container relative z-10 mx-auto px-4">
-        {/* Hero Content Moved Here */}
-        <div className="max-w-4xl mx-auto text-center mb-20">
-          <h1 className="text-5xl md:text-7xl font-bold text-neutral-900 mb-6">
-            HELLO! I AM
-            <span className="block mt-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-500">
-              COACH AKSHAY
-            </span>
-          </h1>
+        {/* Section Header */}
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <h2 id="about-heading" className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6 font-heading">
+            ABOUT ME
+          </h2>
           
           <div className="h-16 flex items-center justify-center">
             <FlipWords 
@@ -88,21 +85,16 @@ export function AboutSection() {
               className="text-2xl md:text-3xl font-medium text-neutral-800"
             />
           </div>
-
-          <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto mb-8">
-            Transform your body and life with personalized fitness training. 
-            Expert guidance for your fitness journey.
-          </p>
         </div>
 
         {/* About Content with Video */}
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto mb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="text-left space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
-                ABOUT ME
-              </h2>
+              <h3 className="text-2xl font-bold text-neutral-900 font-heading">
+                My Approach
+              </h3>
               <p className="text-lg text-neutral-600">
                 I am not just a fitness trainer; I am your dedicated partner in achieving your fitness goals. 
                 With over 7 years of experience in personal training, I specialize in creating customized 
@@ -136,6 +128,9 @@ export function AboutSection() {
 
         {/* Features Section */}
         <div className="mt-20">
+          <h3 className="text-2xl font-bold text-neutral-900 mb-12 text-center font-heading">
+            What I Offer
+          </h3>
           <FeaturesSection features={features} />
         </div>
       </div>

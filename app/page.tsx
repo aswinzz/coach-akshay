@@ -10,16 +10,44 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-neutral-50 to-neutral-100 dark:from-neutral-950 dark:to-neutral-900">
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <ClientAchievementsSection />
-      <TransformationsSection />
-      <AchievementsSection />
-      <ReviewsSection />
-      <ContactSection />
-      <Footer />
-    </main>
+    <>
+      <header>
+        <Navbar />
+      </header>
+
+      <main>
+        <article>
+          <HeroSection />
+          
+          <section aria-labelledby="about-heading">
+            <AboutSection />
+          </section>
+          
+          <section aria-labelledby="client-achievements-heading">
+            <ClientAchievementsSection />
+          </section>
+          
+          <section aria-labelledby="transformations-heading">
+            <TransformationsSection />
+          </section>
+          
+          <section aria-labelledby="achievements-heading">
+            <AchievementsSection />
+          </section>
+          
+          <section aria-labelledby="reviews-heading">
+            <ReviewsSection />
+          </section>
+          
+          <section aria-labelledby="contact-heading">
+            <ContactSection />
+          </section>
+        </article>
+      </main>
+
+      <footer>
+        <Footer />
+      </footer>
+    </>
   )
 }

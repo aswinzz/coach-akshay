@@ -42,7 +42,7 @@ export function TransformationsSection() {
     <section id="transformations" className="py-20 bg-neutral-50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
+          <h2 id="transformations-heading" className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6 font-heading">
             JOURNEYS OF TRANSFORMATION
           </h2>
           <p className="text-lg text-neutral-600">
@@ -84,7 +84,7 @@ const TransformationCard = ({
         <div className="relative h-80 overflow-hidden bg-neutral-100">
           <Image
             src={image}
-            alt={`${name}'s Transformation`}
+            alt={`${name}'s fitness transformation journey with Coach Akshay`}
             fill
             className="object-contain hover:scale-105 transition-transform duration-300"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -93,7 +93,7 @@ const TransformationCard = ({
 
         <div className="p-8 flex-1 flex flex-col">
           <div className="border-l-4 border-blue-500 pl-4">
-            <h3 className="text-2xl font-bold text-neutral-900 mt-1 mb-1">
+            <h3 className="text-2xl font-bold text-neutral-900 mt-1 mb-1 font-heading">
               {name}
             </h3>
           </div>
