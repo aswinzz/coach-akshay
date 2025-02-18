@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://coachakshay.com
+
+# Sitemaps
+Sitemap: https://coachakshay.com/sitemap.xml 
