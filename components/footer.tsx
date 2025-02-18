@@ -1,6 +1,30 @@
+import { Instagram, Mail, Phone, File } from "lucide-react"
 import Image from "next/image"
 
 export function Footer() {
+  const contacts = [
+    {
+      icon: <Mail className="w-6 h-6" />,
+      href: "mailto:coachakshay347@gmail.com",
+      label: "Email Akshay"
+    },
+    {
+      icon: <Instagram className="w-6 h-6" />,
+      href: "https://www.instagram.com/_coach_akshay/",
+      label: "Instagram Profile"
+    },
+    {
+      icon: <Phone className="w-6 h-6" />,
+      href: "https://coachakshay.com/tel:+91-9744962827",
+      label: "Call Akshay"
+    },
+    {
+      icon: <File className="w-6 h-6" />,
+      href: "/files/visiting-card.pdf",
+      label: "Download Visiting Card"
+    }
+  ]
+
   return (
     <footer className="bg-neutral-900 text-white py-12">
       <div className="container mx-auto px-4">
@@ -27,17 +51,19 @@ export function Footer() {
           </div>
           
           <div>
-            <h3 className="font-bold mb-4">Follow Me</h3>
+            <h3 className="font-bold mb-4">Contact Me</h3>
             <div className="flex gap-4">
-              <a href="mailto:coachakshay347@gmail.com" className="text-neutral-400 hover:text-white">
-                Email
-              </a>
-              <a href="https://www.instagram.com/_coach_akshay/" className="text-neutral-400 hover:text-white">
-                Instagram
-              </a>
-              <a href="tel:+91-9744962827" className="text-neutral-400 hover:text-white">
-                Phone
-              </a>
+              {contacts.map((contact, index) => (
+                <a
+                  key={contact.href}
+                  href={contact.href}
+                  target="_blank"
+                  rel="noopener noreferrer" 
+                  className="text-neutral-400 hover:text-white"
+                >
+                  {contact.icon}
+                </a>
+              ))}
             </div>
           </div>
         </div>
