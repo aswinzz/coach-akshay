@@ -117,7 +117,7 @@ export function AboutSection() {
                 loop
                 muted
                 playsInline
-                poster="/images/main-1.jpg"
+                poster="/images/main-1-rotated.jpg"
               >
                 <source src="/files/main-video-01.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

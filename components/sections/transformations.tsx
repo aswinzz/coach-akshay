@@ -20,7 +20,7 @@ const transformations = [
   {
     id: 3,
     name: "Aswin",
-    image: "/images/aswin.jpg",
+    image: "/images/aswin-new.jpg",
     description: "In just 6 months, Akshay's personalized training and dietary guidance transformed my body. Leaner with more muscle mass, his expertise has been invaluable to my fitness journey!"
   },
   {
@@ -31,7 +31,7 @@ const transformations = [
   },
   {
     id: 5,
-    name: "Unknown",
+    // name: "",
     image: "/images/unknown.jpg",
     description: "6 months with Akshay, from 64.2 kg to 61.5 kg. Remarkable body changes. Nutrition advice, daily monitoring, and energy tips. Strength training for more energy, balanced exercises tailored to body type. Highly recommend!"
   },
@@ -74,7 +74,7 @@ const TransformationCard = ({
   image,
   description
 }: {
-  name: string
+  name?: string
   image: string
   description: string
 }) => {
@@ -92,11 +92,11 @@ const TransformationCard = ({
         </div>
 
         <div className="p-8 flex-1 flex flex-col">
-          <div className="border-l-4 border-blue-500 pl-4">
+          {name && (<div className="border-l-4 border-blue-500 pl-4">
             <h3 className="text-2xl font-bold text-neutral-900 mt-1 mb-1 font-heading">
               {name}
             </h3>
-          </div>
+          </div>)}
           
           <p className="mt-4 text-neutral-600 leading-relaxed">
             {description}
