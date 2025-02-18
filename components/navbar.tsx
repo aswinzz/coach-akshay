@@ -1,10 +1,11 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Button } from "./ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 import { Menu } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -17,9 +18,25 @@ const navItems = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > window.innerHeight - 80
+      setScrolled(isScrolled)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <nav className="fixed top-0 inset-x-0 h-16 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-sm z-50 border-b border-neutral-200 dark:border-neutral-800">
+    <nav 
+      className={cn(
+        "fixed top-0 inset-x-0 h-16 bg-white/80 backdrop-blur-sm z-50 border-b border-neutral-200 transition-all duration-300",
+        scrolled ? "translate-y-0" : "-translate-y-full"
+      )}
+    >
       <div className="container mx-auto h-full flex items-center justify-between">
         <Image 
           src="/images/logo.png"
@@ -35,7 +52,7 @@ export function Navbar() {
             <a 
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors"
+              className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
             >
               {item.name}
             </a>
@@ -56,7 +73,7 @@ export function Navbar() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="text-lg font-medium text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors"
+                  className="text-lg font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
                 >
                   {item.name}
                 </a>
