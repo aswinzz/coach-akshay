@@ -8,17 +8,17 @@ const achievements = [
   {
     id: 1,
     title: "Mr. Thrissur Championship",
-    image: "/images/achievement-1.jpg"
+    image: "/images/achievement-1.JPG"
   },
   {
     id: 2,
     title: "Mr. Thrissur Championship",
-    image: "/images/achievement-2.jpg"
+    image: "/images/achievement-2.JPG"
   },
   {
     id: 3,
     title: "Mr. Kerala Championship",
-    image: "/images/achievement-3.jpg"
+    image: "/images/achievement-3.JPG"
   }
 ]
 
