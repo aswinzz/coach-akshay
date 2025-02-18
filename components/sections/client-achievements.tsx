@@ -30,7 +30,7 @@ export function ClientAchievementsSection() {
     <section id="client-achievements" className="py-20 bg-neutral-50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6 font-heading">
             CLIENT ACHIEVEMENTS
           </h2>
           <p className="text-lg text-neutral-600">
@@ -49,7 +49,7 @@ export function ClientAchievementsSection() {
             >
               <Card className="overflow-hidden group hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-neutral-900 text-center mb-8">
+                  <h3 className="text-2xl font-bold text-neutral-900 text-center mb-8 font-heading">
                     {achievement.title}
                   </h3>
                   <div className="grid grid-cols-2 gap-8">
