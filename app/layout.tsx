@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import StructuredData from "./structured-data";
+import { Analytics } from '@vercel/analytics/react'
 
 const montserrat = Montserrat({ 
   subsets: ["latin"],
@@ -125,6 +126,7 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${poppins.variable} font-sans`}>
         <StructuredData />
         {children}
+        <Analytics />
       </body>
     </html>
   );
