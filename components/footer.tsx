@@ -26,7 +26,7 @@ export function Footer() {
   ]
 
   return (
-    <footer className="bg-neutral-900 text-white py-12">
+    <footer className="bg-neutral-800 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -69,7 +69,7 @@ export function Footer() {
         </div>
         
         <div className="mt-8 pt-8 border-t border-neutral-800 text-center text-neutral-400">
-          <p>Copyright © 2024 Akshay CS | Developed By: <a href="aswinvb.com" className="hover:text-white">Aswin VB</a></p>
+          <p>Copyright © 2024 Akshay CS | Developed By: <a href="https://aswinvb.com" className="hover:text-white">Aswin VB</a></p>
         </div>
       </div>
     </footer>
