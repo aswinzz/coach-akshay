@@ -31,7 +31,7 @@ const transformations = [
   },
   {
     id: 5,
-    // name: "",
+    name: "Deepsi",
     image: "/images/unknown.jpg",
     description: "6 months with Akshay, from 64.2 kg to 61.5 kg. Remarkable body changes. Nutrition advice, daily monitoring, and energy tips. Strength training for more energy, balanced exercises tailored to body type. Highly recommend!"
   },
