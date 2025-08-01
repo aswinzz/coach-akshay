@@ -20,7 +20,7 @@ const transformations = [
   {
     id: 3,
     name: "Aswin",
-    image: "/images/aswin-new.jpg",
+    image: "/images/aswin-new-2.jpg",
     description: "In just 6 months, Akshay's personalized training and dietary guidance transformed my body. Leaner with more muscle mass, his expertise has been invaluable to my fitness journey!"
   },
   {
